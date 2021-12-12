@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <h1 >Age Validator</h1>
+    <input type="text" id="age" placeholder="enter age">
+    <button onclick="ValidateAge()">Validate</button>
+    <div id="result"></div>
+</body>
+<script>
+    function ValidateAge() {
+        let age_value = document.querySelector("#age").value
+        let html_data = "";
+        if (age_value >= 18) { 
+            html_data = `<p style="color: green;">age is valide</p>` } 
+            else {
+                 html_data = `<p style="color: red;">age is invalide</p>` }
+
+        document.querySelector("#result").innerHTML = html_data
+    }
+</script>
+
+</html>

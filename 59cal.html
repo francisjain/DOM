@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/d49c9b669c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+
+    <style>
+        .bni {
+            color: white;
+            padding: auto;
+            text-align: center;
+            font-weight: 150;
+            font-size: 20px;
+        }
+        .cl{
+            width: 300px;
+            display: flex;
+  justify-content: space-evenly;
+ /* background-color: thistle; */
+  
+        }
+    </style>
+
+</head>
+<body class="bg-secondary opacity-25% ">
+    <div class="container w-50% mt-5  bg-secondary pb-5 rounded-3">
+        <h1 class="text-center ">Calc</h1>
+        <div  class=" bg-transparent rounded-3 container mt-5  pt-3 border border-3 text-center" style="height: 450px; width: 325px; " >
+            <div class="input-group input-group-lg p-2">
+                <input id="result" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+              </div>
+            
+                <div class="mb-2 p-2 mt-3 cl">
+                    <input type="button" class="btn btn bni" value="C" onclick="clearBox()">
+                    <button type="button" class="btn btn bni" onclick="displayValue(`%`)"><i class="fas fa-percent"></i></button>
+                    <button type="button" class="btn btn bni" onclick="backspace()"><i class="fas fa-backspace"></i></button>
+                    <button type="button" class="btn btn bni" onclick="displayValue(`/`)"><i class="fas fa-divide"></i></button>
+                </div>
+                <div class="mb-2 p-2 cl">
+                    <input type="button" class="btn btn bni" value="7" onclick="displayValue(`7`)">
+                    <input type="button" class="btn btn bni" value="8" onclick="displayValue(`8`)">
+                    <input type="button" class="btn btn bni" value="9" onclick="displayValue(`9`)">
+                    <button type="button" class="btn btn bni" onclick="displayValue(`*`)"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="mb-2 p-2 cl">
+                    <input type="button" class="btn btn bni" value="4" onclick="displayValue(`4`)">
+                    <input type="button" class="btn btn bni" value="5" onclick="displayValue(`5`)">
+                    <input type="button" class="btn btn bni" value="6" onclick="displayValue(`6`)">
+                    <button type="button" class="btn btn bni" onclick="displayValue(`-`)"><i class="fas fa-minus"></i></button>
+                </div>
+                <div class="mb-2 p-2 cl"> 
+                    <input type="button" class="btn btn bni" value="1" onclick="displayValue(`1`)">
+                    <input type="button" class="btn btn bni" value="2" onclick="displayValue(`2`)">
+                    <input type="button" class="btn btn bni" value="3" onclick="displayValue(`3`)">
+                    <button type="button" class="btn btn bni" onclick="displayValue(`+`)"><i class="fas fa-plus"></i></button>
+                </div>
+                <div class="mb-2 p-2 cl">
+                    <input type="button" class="btn btn bni" value="00" onclick="displayValue(`00`)">
+                    <input type="button" class="btn btn bni" value="0" onclick="displayValue(`0`)">
+                    <input type="button" class="btn btn bni" value="." onclick="displayValue(`.`)">
+                    <button type="button" class="btn btn bni" onclick="evaluateExpression()"><i class="fas fa-equals"></i></button>
+                </div>
+            
+        </div>
+    </div>
+</body>
+<script src="./59cal.js"></script>
+</html>

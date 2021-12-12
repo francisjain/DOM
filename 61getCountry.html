@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+   
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <h1>GetCountry Data</h1>
+            <button class="btn btn-primary" onclick="populationValues()"> Get Date</button>
+
+            <table class="table">
+                <tr>
+                    <th>Country Name</th>
+                    <th>Population</th>
+                    <th>Language</th>
+                    <th>Currency</th>
+                </tr>
+                <tbody id="result">
+
+                </tbody>
+            </table>
+
+        </div>
+        <div class="col-2"></div>
+        </div>
+        
+
+    </div>
+    
+</body>
+<script>
+    var countries=[
+{
+country_name: 'Zimbabwe',
+population: 14862927,
+language: 'English',
+currency: 'Zambian kwacha'
+},
+{
+country_name: 'Zambia',
+population: 18383956,
+language: 'English',
+currency: 'Zambian kwacha'
+},
+{
+country_name: 'Yemen',
+population: 29825968,
+language: 'Arabic',
+currency: 'Yemeni rial'
+},
+{
+country_name: 'Western Sahara',
+population: 510713,
+language: 'Spanish',
+currency: 'Moroccan dirham'
+},
+{
+country_name: 'Wallis and Futuna',
+population: 11750,
+language: 'French',
+currency: 'CFP franc'
+},
+{
+country_name: 'Vietnam',
+population: 97338583,
+language: 'Vietnamese',
+currency: 'Vietnamese đồng'
+}
+
+]
+
+function populationValues(){
+    let html_data=""
+    countries.forEach(country=>{
+        html_data += `<tr><td> ${country.country_name}</td>
+            <td> ${country.population}</td>
+            <td> ${country.language}</td>
+            <td> ${country.currency}</td>
+            </tr>`
+    })
+    document.querySelector("#result").innerHTML=html_data
+}
+
+</script>
+</html>
