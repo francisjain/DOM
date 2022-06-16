@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body class="bg-secondary bg-opacity-10" onload="bank.getUser()">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary bg-opacity-25">
+        <div class="container-fluid  ">
+          <a class="navbar-brand text-primary" href="#" >Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active " aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Fund Transfer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active"  aria-current="page" onclick="bank.balanceEnq()">Balance Enquiry</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active " aria-current="page" onclick="bank.paymentHis()" data-bs-toggle="modal" data-bs-target="#exampleModal1">Payment History</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active " aria-current="page" onclick="bank.logout()">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div id="welcome" class="container p-5"></div>
+      <div id="balEq" class="p-5"></div>
+
+              <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Fund Transfer</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="event.preventDefault(); bank.fundTrans()">
+        <div class="m-2"><input type="text" placeholder="Enter Account Number" class="form-control" id="tacno" required></div>
+        <div class="m-2"><input type="text" placeholder="Confirm Account Number" class="form-control" id="ctacno" required></div>
+        <div class="m-2"><input type="text" placeholder="Enter Amount" class="form-control" id="tamt" required></div>
+      </div></form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" >Proceed</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+              <!-- Modal History -->
+              <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Payment History</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <table class="table">
+                        <tr><td>Account Number</td>
+                        <td>Amount Used</td>
+                    <td>Current Balance</td></tr>
+                    <tbody id="result"></tbody>
+                    </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+      
+
+</body>
+
+<script src="./bk_scrpt.js"></script>
+</html>
