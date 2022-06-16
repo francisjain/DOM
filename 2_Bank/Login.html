@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/d49c9b669c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <style>
+            p{font-size: 20px;}
+        </style>
+
+</head>
+
+<body>
+    <div class="container w-100 h-100 text-center ">
+        <!-- <i class="fab fa-3x fa-github mt-5" ></i> -->
+        <p class="fs-3 mt-4 fw-lighter"> Sign in to Your Bank Account</p>
+        <form action="" onsubmit="event.preventDefault(); bank.login()">
+            <div class="container w-25 bg-light p-4 text-dark  text-start border border-1 rounded-3 shadow-none">
+
+                <label for="user" class="mb-1 fs-6">Username or email address</label><br>
+                <div class="input-group-sm "><input type="text" id="bk_username" class="form-control rounded-3 mb-2" required></div>
+                
+                <div class="row">
+                    <div class="col-4"><label for="Pass" class="mb-1 text-start">Password</label></div><div class="col-2"></div>
+                    <div class="col-6">
+                        <a href="" class="text-decoration-none fw-light">Forgot
+                            password?</a>
+                    </div>
+                </div>
+                <div class="input-group-sm"><input type="password" id="bk_password" class="form-control rounded-3 mb-4" required></div>
+                
+                <div class="input-group-sm">
+                    <button type="submit" class=" col-12  btn rounded-3 mb-1 bg-success text-white bg-opacity-75 fw-bold" >Sign
+                        in</button>
+                </div>
+            </div>
+
+
+<div class="container w-25  p-2 mt-3 text-dark  border border-1 rounded-3">
+                <p class="text-center mb-1 mt-1 fs-6">Registeration? &nbsp;<a href="https://github.com/signup?source=login" class="text-decoration-none">Create
+                        an account.</a></p>
+
+</div>           <br><br><br>
+            <div class="mb-5">
+                <a href="https://github.com/login" class="text-decoration-none">Terms</a>&nbsp;
+                <a href="https://github.com/login" class="text-decoration-none">Privacy</a>&nbsp;
+                <a href="https://github.com/login" class="text-decoration-none">Security</a>&nbsp;
+                <a href="https://github.com/login" class="text-decoration-none text-dark fw-light ">Contact </a>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="./bank_script.js"></script>
+
+</html>
